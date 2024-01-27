@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.io.Serializable;
 
 @Entity
-public class Sammy implements Serializable {
+public class Samoyed implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, updatable = false)
@@ -20,9 +20,9 @@ public class Sammy implements Serializable {
     private String breeder;
     private String imageUrl;
 
-    public Sammy() {}
+    public Samoyed() {}
 
-    public Sammy(String name, int born, int gender, String colour, String coat, String microchip, String breeder, String imageUrl) {
+    public Samoyed(String name, int born, int gender, String colour, String coat, String microchip, String breeder, String imageUrl) {
         this.name = name;
         this.born = born;
         this.gender = gender;
@@ -107,7 +107,7 @@ public class Sammy implements Serializable {
 
     @Override
     public String toString() {
-        return "Sammy{" +
+        return "SamoyedRepo{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", born=" + born +
